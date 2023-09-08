@@ -615,12 +615,12 @@ class SwinTransformerSys(nn.Module):
         for layer in self.layers:
             x_downsample.append(x)
             x = layer(x)
-        return x_downsample
+        return x_downsample, x
 
     def forward(self, x):
-        x_downsample= self.forward_features(x)
+        x_downsample, out4= self.forward_features(x)
 
-        return x_downsample
+        return x_downsample, out4
 
     def flops(self):
         flops = 0
