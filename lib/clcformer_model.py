@@ -245,7 +245,7 @@ class CLCFormer(nn.Module):
 
     def forward(self, imgs):
         # transformer path
-        x_b = self.transformer(imgs)
+        x_b, out4 = self.transformer(imgs)
         x_b_1 = x_b[0]
         x_b_1 = torch.transpose(x_b_1, 1, 2)
         x_b_1 = x_b_1.view(x_b_1.shape[0], -1, 128, 128)
@@ -261,7 +261,7 @@ class CLCFormer(nn.Module):
         x_b_3 = x_b_3.view(x_b_3.shape[0], -1, 32, 32)
         x_b_3 = self.drop(x_b_3)
 
-        x_b_4 = x_b[3]
+        x_b_4 = out4
         x_b_4 = torch.transpose(x_b_4, 1, 2)
         x_b_4 = x_b_4.view(x_b_4.shape[0], -1, 16, 16)
         x_b_4 = self.drop(x_b_4)
