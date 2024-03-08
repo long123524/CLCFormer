@@ -247,22 +247,22 @@ class CLCFormer(nn.Module):
         # transformer path
         x_b = self.transformer(imgs)
         x_b_1 = x_b[0]
-        x_b_1 = torch.transpose(x_b_1, 1, 2)
+        x_b_1 = torch.transpose(x_b_1, 1, 2)             ##maybe need to take out the first tensor,i.e., x_b_1[0], if x_b_1 is tuple, due to the torch version issue.
         x_b_1 = x_b_1.view(x_b_1.shape[0], -1, 128, 128)
         x_b_1 = self.drop(x_b_1)
 
         x_b_2 = x_b[1]
-        x_b_2 = torch.transpose(x_b_2, 1, 2)
+        x_b_2 = torch.transpose(x_b_2, 1, 2)                ## ##maybe need to take out the first tensor,i.e., x_b_2[0], if x_b_1 is tuple, due to the torch version issue.
         x_b_2 = x_b_2.view(x_b_2.shape[0], -1, 64, 64)
         x_b_2 = self.drop(x_b_2)
 
         x_b_3 = x_b[2]
-        x_b_3 = torch.transpose(x_b_3, 1, 2)
+        x_b_3 = torch.transpose(x_b_3, 1, 2)             ## ##maybe need to take out the first tensor,i.e., x_b_3[0], if x_b_1 is tuple, due to the torch version issue.
         x_b_3 = x_b_3.view(x_b_3.shape[0], -1, 32, 32)
         x_b_3 = self.drop(x_b_3)
 
         x_b_4 = x_b[3]
-        x_b_4 = torch.transpose(x_b_4, 1, 2)
+        x_b_4 = torch.transpose(x_b_4, 1, 2)                ## ##maybe need to take out the first tensor,i.e., x_b_4[0], if x_b_1 is tuple, due to the torch version issue.
         x_b_4 = x_b_4.view(x_b_4.shape[0], -1, 16, 16)
         x_b_4 = self.drop(x_b_4)
 
