@@ -144,7 +144,7 @@ def test(model, test_data):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epoch', type=int, default=25, help='epoch number')
+    parser.add_argument('--epoch', type=int, default=50, help='epoch number')
     parser.add_argument('--lr', type=float, default=1e-4, help='learning rate')  ###
     parser.add_argument('--batchsize', type=int, default=8, help='training batch size')
     parser.add_argument('--grad_norm', type=float, default=2.0, help='gradient clipping norm')
