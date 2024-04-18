@@ -134,7 +134,7 @@ if __name__ == "__main__":
             # outputs7, outputs8, _, outputs9 = model(torch.flip(images, [-2]))
             # predict_3 = torch.flip(outputs9, [-2])
 
-            # raw_predictions = torch.sigmoid(raw_predictions)
+            raw_predictions = torch.sigmoid(raw_predictions)
             # predict_2 = torch.sigmoid(predict_2)
             # predict_3 = torch.sigmoid(predict_3)
 
