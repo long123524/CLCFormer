@@ -102,7 +102,7 @@ if __name__ == "__main__":
 
     device = torch.device('cuda' if torch.cuda.is_available() else "cpu")
     model = CLCFormer().cuda()
-    model.load_state_dict(torch.load(model_file, map_location=torch.device(device)))    #报错可以加False
+    model.load_state_dict(torch.load(model_file, map_location=torch.device(device)))    
     model.eval()
 
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
             images = Variable(images).cuda()
             gts = Variable(gts).cuda()
 
-            raw_predictions = model(images)
+            outputs4, outputs5, _, raw_predictions = model(images)
             # outputs4, outputs5, _, outputs6 = model(torch.flip(images, [-1]))
             # predict_2 = torch.flip(outputs6, [-1])
             # outputs7, outputs8, _, outputs9 = model(torch.flip(images, [-2]))
@@ -137,6 +137,7 @@ if __name__ == "__main__":
             raw_predictions = torch.sigmoid(raw_predictions)
             # predict_2 = torch.sigmoid(predict_2)
             # predict_3 = torch.sigmoid(predict_3)
+            ## pred = (raw_predictions + predict_2 +predict_3)/3
 
             pred = raw_predictions
 
