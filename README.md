@@ -58,5 +58,15 @@ We are very grateful for these excellent works [ST-UNet](https://github.com/Xinn
 
 ### Citation:
 ```
-Long J, Li M, Wang X. Integrating spatial details with long-range contexts for semantic segmentation of very high resolution remote sensing images. IEEE GEOSCIENCE AND REMOTE SENSING LETTERS, 2023,20:1-5. DOI: 10.1109/LGRS.2023.3262586
+Citation：
+{
+Authors: Long Jiang （龙江）, Li Mengmeng* （李蒙蒙）, Wang Xiaoqin （汪小钦）;
+Institute: The Academy of Digital China (Fujian), Fuzhou University,
+Article Title: Integrating spatial details with long-range contexts for semantic segmentation of very high resolution remote sensing images,
+Publication title: IEEE Geoscience and Remote Sensing Letters,
+Year: 2023,
+volume： 20
+Page:1-5,
+DOI: 10.1109/LGRS.2023.3262586
+}
 ```
