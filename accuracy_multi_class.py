@@ -182,19 +182,20 @@ def main():
             predict_3 = torch.flip(outputs9, [-2])
 
 
-
+    
             image_ids = (os.path.basename(img_file_name[0]))[:-4]
             masks_true = gts.cpu().numpy().squeeze(0)
-            masks_true[masks_true>0]= 1
-            masks_true[masks_true <= 0] = 0
+            # masks_true[masks_true>0]= 1
+            # masks_true[masks_true <= 0] = 0
 
-            raw_predictions = torch.sigmoid(raw_predictions)
-            predict_2 = torch.sigmoid(predict_2)
-            predict_3 = torch.sigmoid(predict_3)
+            # raw_predictions = torch.sigmoid(raw_predictions)
+            predictions = torch.argmax(raw_predictions, dim=1)
+            # predict_2 = torch.sigmoid(predict_2)
+            # predict_3 = torch.sigmoid(predict_3)
 
-            predictions = (raw_predictions +predict_2 + predict_3)/3.
-            predictions[predictions>0.5] = 1
-            predictions[predictions<=0.5] = 0
+            # predictions = (raw_predictions +predict_2 + predict_3)/3.
+            # predictions[predictions>0.5] = 1
+            # predictions[predictions<=0.5] = 0
 
 
             for i in range(raw_predictions.shape[0]):
