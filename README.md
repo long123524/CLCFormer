@@ -51,7 +51,7 @@ Efficientnet & SwinV2: 链接：https://pan.baidu.com/s/1gVVYyFJa-3bGpaMMRtKGFg 
 python train_isic.py
 
 2. Evaluate 
-python accuracy_evaluation.py or python accuracy_multi_class.py
+python accuracy_evaluation.py (binary classfication, e.g., building extracting) or python accuracy_multi_class.py (multi-class classification)
 
 ## Acknowledgement
 We are very grateful for these excellent works [ST-UNet](https://github.com/XinnHe/ST-UNet), [TransFuse](https://github.com/Rayicer/TransFuse) and [BuildFormer](https://github.com/WangLibo1995/BuildFormer), which have provided the basis for our framework.
