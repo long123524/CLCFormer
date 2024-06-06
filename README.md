@@ -44,7 +44,8 @@ WHU building dataset:http://gpcv.whu.edu.cn/data/building_dataset.html
 Potsdam dataset:https://www.isprs.org/education/benchmarks/UrbanSemLab/Default.aspx
 
 ## Pretrained weight
-Efficientnet & SwinV2: 链接：https://pan.baidu.com/s/1gVVYyFJa-3bGpaMMRtKGFg 提取码：vs11 
+Efficientnet & SwinV2: 链接：https://pan.baidu.com/s/1zBmHtnpafVjstgdLUO7DJA 提取码：qv8z 
+link: https://drive.google.com/file/d/1arfOBeQWZLUStvc64MkgtG3nQesG2Ini/view?usp=sharing
 
 ## Training and testing
 1. Train the model
